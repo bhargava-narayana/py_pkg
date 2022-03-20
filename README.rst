@@ -8,13 +8,13 @@ OR
 pyInstaller instructions
 ========================
 
-#. As is build
-   -----------
+1. As is build
+---------------
 
     `pyinstaller cli.py -y`
  
-Add data file under data directory in dist
--------------------------------------------
+2. Add data file under data directory in dist
+---------------------------------------------
 
     `pyinstaller cli.py --add-data py_pkg/__version__:data/ -y`
 
@@ -22,6 +22,7 @@ Add data file under data directory in dist
     
     file is found under dist/cli/data/__version__
 
-Single file
------------
+3. Single file
+--------------
+
     `pyinstaller cli.py --onefile -y`
