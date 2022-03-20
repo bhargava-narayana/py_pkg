@@ -8,8 +8,8 @@ OR
 pyInstaller instructions
 ========================
 
-As is build
------------
+#. As is build
+--------------
 
     `pyinstaller cli.py -y`
  
