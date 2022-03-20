@@ -1,9 +1,13 @@
 Package installation
 ====================
+
     `pip install -e <absolute path of the package>`
-OR 
-    `cd <package location>`
-    `pip install -e .`
+OR
+
+    .. code ::
+
+        cd <package location>
+        pip install -e .
 
 pyInstaller instructions
 ========================
