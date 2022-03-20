@@ -21,7 +21,7 @@ def get_dependencies() -> list:
     return dep
 
 def get_pkg_ver() -> str:
-    return read("__version__")
+    return read("py_pkg/__version__")
 
 setup(name="testpkg",
       version=get_pkg_ver(),
@@ -32,13 +32,14 @@ setup(name="testpkg",
       author="Bhargava Narayana",
       pkg_dir={"": "pkg"},
       packages=find_packages(
-                             where="pkg",
+                             where="py_pkg",
                              exclude=["docs",]
                             ),
+      include_data_files=True,
       install_requires=get_dependencies(),
       entry_points={
           "console_scripts": [
-              "test_pkg=pkg.main:main",
+              "test_pkg=py_pkg.main:main",
               ]
           },
       zip_safe=False,

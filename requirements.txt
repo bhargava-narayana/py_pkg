@@ -1,2 +1,5 @@
 # for packaging
 pyinstaller==4.10
+
+# package imports
+pyyaml
