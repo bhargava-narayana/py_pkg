@@ -18,9 +18,9 @@ Add data file under data directory in dist
 
     `pyinstaller cli.py --add-data py_pkg/__version__:data/ -y`
 
-    .. note::
+.. note::
     
-        file is found under dist/cli/data/__version__
+    file is found under dist/cli/data/__version__
 
 Single file
 -----------
