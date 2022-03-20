@@ -14,20 +14,16 @@ def get_py_ver() -> str:
 
 def get_dependencies() -> list:
     dep = list()
-    cont = read("requirements.txt")
-    cont = cont.split(os.linesep)
-    print(f"cont:\n{cont}")
+    cont = (read("requirements.txt")).split(os.linesep)
     for _ in cont:
         if (not _.startswith("#")) and (len(_) !=0):
-            print(f"line:{_}")
             dep.insert(len(dep), _)
-    print(f"dependecies:\n{dep}")
     return dep
 
 def get_pkg_ver() -> str:
     return read("__version__")
 
-setup(name="test-pkg",
+setup(name="testpkg",
       version=get_pkg_ver(),
       description="python test pkg",
       long_description=read("README.rst"),
@@ -40,6 +36,11 @@ setup(name="test-pkg",
                              exclude=["docs",]
                             ),
       install_requires=get_dependencies(),
+      entry_points={
+          "console_scripts": [
+              "test_pkg=pkg.main:main",
+              ]
+          },
       zip_safe=False,
       python_requires=f"=={get_py_ver()}",
     )
