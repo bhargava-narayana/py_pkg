@@ -9,7 +9,7 @@ pyInstaller instructions
 ========================
 
 #. As is build
---------------
+   -----------
 
     `pyinstaller cli.py -y`
  
